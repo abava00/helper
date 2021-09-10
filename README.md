@@ -6,7 +6,7 @@
 ```
 > WhiteNoiseMaker.c
 ```
-####setting
+#### setting
 WhiteNoiseMaker.c内の6行目に音ファイルを指定する
 
 `PlaySound(TEXT("C:\\Users\\%USERNAME%\\Desktop\\sheet\\noise\\Wnoise.wav"), NULL, SND_FILENAME | SND_SYNC);`
