@@ -25,9 +25,15 @@
 ```
 > cdir.ps1
 ```
+#### setting
+cdir.ps1内の4行目にbookmarkを記述したtempファイルを作成する(初期値はUsers直下)
+
+`$filepath="$env:XDG_CONFIG_HOME\.filebookmark"`
+
 
 ### cheat.bat ###
 vimとVScodeのショートカットキーのカンニングペーパーを表示します
+(同じファイル階層にVim_learn.txtとCScode_learn.txtが必要)
 
 1. VScode(vim)のカンペをVScodeで起動する
 ```
@@ -76,6 +82,15 @@ javaの文字コードをエンコードしてコンパイルします(InteiJが
 ```
 > py logdll.py [目標文書]
 ```
+#### setting
+logdll.py内の19行目の保存先ディレクトリを設定する
+
+`self.save_dir = "save" `
+
+logdll.py内の24行目をキーとして設定する
+
+`self.key = "https://cdn.discordapp.com"`
+
 
 ### mc.bat
 mkdir と cd を同時にします
