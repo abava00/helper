@@ -1,0 +1,269 @@
+#%#カーソルの移動--------------------------
+				  k				k
+          ↑							↑
+	    h ←	*	→l		   	h ←	*	→l
+          ↓							↓
+          j							j
+
+n文字後ろへ移動する (n)h   5h
+Move left one character
+n行下へ移動する (n)j  100j
+Move down one line
+n文字前へ移動する (n)l
+Move right one character
+
+n行上へ移動する (n)k
+Move up one line
+
+次の単語へ移動する w
+HELLO WORLD BY VIM
+
+単語の最後へ移動する e
+Move to end of word
+
+単語の先頭へ移動する b
+Move to beginning of word
+
+行の最初へ移動する 0
+Move to beginning of line
+
+行の最後へ移動する $
+Move to end of line
+
+画面の1番上へ移動する H
+Move to first line of screen
+
+画面の真ん中へ移動する M
+Move to middle line of screen
+
+画面の1番下へ移動する L
+Move to last line of
+
+tab空白部分まで戻る ^
+      Move to first non whitesp■ace char
+(結果)
+      ■Move to first non whitespace char
+
+次の(同じ行の何かしらの文字)へ移動する f()
+(wを探す場合) fw
+abcdefghigklmnopqrstuvwxyz
+
+前の(同じ行の何かしらの文字)へ移動する  F()
+(Aを探す場合) FA
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+タブを挿入する >
+タブを削除する <
+
+
+
+#%#画面の移動-------------------------------
+
+画面を下に移動する ctrl + e
+
+画面を上に移動する ctrl + y
+
+カーソル位置を画面の1番上に移動する　zt
+
+ファイルのn行目へ移動する (n)gg
+
+ファイルの最後へ移動する G
+
+
+
+#%#挿入モードへの変更--------------------------
+
+現在のカーソル位置で挿入モードになる i
+Insert
+Insert■
+
+カーソル位置から1文字前で挿入モードになる a
+Append
+Appe(ココが入力欄だった場合)nd
+Appen■d
+
+行の最初から挿入モードになる I
+Insert at start of line
+■Insert at start of line
+
+行の最後から挿入モードになる A
+Append at end line
+App(ココが入力欄だった場合)end at end line
+Append at end line■
+
+カーソル位置の下に行を追加する o
+Insert new line below
+
+カーソル位置の上に行を追加する O
+Insert new line above
+
+入力している単語の前部分を消す ce
+Change rest of current word
+Change rest of cu(ココが入力欄だった場合)rrent word
+Change rest of cu■ word
+
+入力している単語を削除する dw
+Delete word
+Delete w(ココが入力欄だった場合)ord
+Delete w■
+
+１文字を置き換えてコマンドモードになる r
+Cange char and return to cmd mode
+Cange (カーソル位置)char and return to cmd mode (charを別の単語に置き換える
+Cange Ahar and return to cmd mode
+
+置換モードへ変更する R
+Enter replace mode
+Enter rAAAAAAAAAAe
+
+#%#既存の行を編集する---------------------------
+
+ペーストする P
+Pasete
+Pasete
+
+カーソル位置の行をコピーする　yy
+Yank line
+(結果)
+Yank line
+
+カーソル位置の前の行をコピーする　y$
+Yank to e■nd of line
+(結果)
+nd of line
+
+カーソル位置の前の単語をコピーする ye
+Yank to e■nd of word
+(結果)
+nd
+
+カーソル位置の行を削除する (n)dd
+Delete cur■rent line
+(結果)
+[削除済み]
+
+カーソル位置の単語の途中を削除する　de
+Dele■te to end of word
+(結果)
+Dele to end of word
+
+カーソル位置の行の途中を削除する　d$
+Dele■te to end of line
+(結果)
+Dele
+
+
+カーソル位置の行の前部分を削除する D
+Delete to e■nd of line
+(結果)
+Delete to e
+
+d,D でできたことは，c,D でもできる．しかも挿入モードから再開できる．
+
+
+元に戻す u
+undo
+
+やり直す ctrl + r
+redo
+
+最後の変更を繰り返す .
+Repeat last change
+(をペーストしたばかりだった場合)
+Repeat last change
+Repeat last change
+Repeat last change
+
+#%#ヴィジュアルモード下で行うこと--------------------------
+
+ヴィジュアルモードに変更 v
+
+ヴィジュアルモードに変更 V
+
+大文字と小文字を変更する ~
+AAAAA■AAABBBddddBBBCCC■CCCC
+(結果)
+AAAAAaaabbbDDDDbbbccccCCCC
+
+範囲の文字を置き換え,挿入モードになる　c
+Chan■ge highlighted t■ext
+(結果)
+Chanext
+
+範囲の文字をコピーする y
+
+範囲を削除する d
+
+範囲を再度選択する =
+
+矩形モードで行を選択後
+複数行でインサートを行う　I
+
+■
+HELLO
+WORLD
+GOOD
+BYE■
+
+■HELLO
+■WORLD
+■GOOD
+■BYE
+
+
+#%#コマンドモード-------------------------------------------
+
+ファイルを保存する　:w (neme)
+
+画面を分割する(縦) :sp
+
+画面を分割する(横) :vs
+
+分割した画面を移動する ctrl + w ctrl + w
+
+分割した画面を閉じる :q
+
+全ての画面を閉じる :qa
+
+保存せずにファイルを閉じる :q!
+
+保存しファイルを閉じる　:wq
+
+カーソル位置に指定したファイルを挿入する　:r (name)
+
+カーソル位置に指定したコマンド(cmdの)の結果を挿入する :r !(コマンド)
+
+指定したファイルを削除する :!rm (name)
+
+新しいファイルを開く :e (name)
+
+
+#%#置換----------------------------------------------------------
+
+カーソル位置の行の最初の指定した文字(A)を指定した文字(B)に置換する :s/A/B
+HELLO WORLD! write something in English
+(結果 :s/!/??)
+HELLO WORLD?? write something in English
+
+カーソル位置の行の全ての文字(A)を文字(B)に置換する :s/A/B/g
+HELLO WORLD! write something in English
+(結果 :s/i/WOW/g)
+HELLO WORLD! wrWOWte somethWOWng WOWn EnglWOWsh
+
+各行最初の文字(A)を文字(B)に置換する :%s/A/B
+
+全ての文字(A)を文字(B)に置換する :%s/A/B/g
+
+#%#検索-------------------------------------------------------------
+
+指定した文字(A)を検索する(上から) /A
+指定した文字(A)を検索する(下から) ?A
+
+検索した単語を移っていく(次の単語へ) n
+検索した単語を移っていく(前の単語へ) N
+/(?)A　→ enter → n(N)
+
+
+helloWorld
+
+
