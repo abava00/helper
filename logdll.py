@@ -1,12 +1,13 @@
 # Special thanks to B
-```
+
+'''
 平文の中に
 https://cdn.discordapp.com
 の文字列が存在するそのファイルをダウンロードします
 
 ファイル名_1.拡張子 で保存され1,2,3・・・と加算されます
 
-```
+'''
 import os
 import re
 import sys
@@ -17,14 +18,14 @@ class logdll:
     def __init__(self, filename):
         self.filename = filename
         self.save_dir = "save" # 保存したいファイルのPATH
-        
+
         # 保存ディレクトリが存在しない場合作成する
         if self.save_dir not in os.listdir("./"):
             os.mkdir(self.save_dir)
         self.key = "https://cdn.discordapp.com" # パターンの識別
         self.number = 0
         self.close = {}
-        
+
         with open(filename, "r", encoding="utf-8") as f:
             text = f.read()
         pattern = re.compile(self.key +".+")
