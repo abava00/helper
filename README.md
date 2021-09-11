@@ -1,6 +1,16 @@
 ## My little help program ##
 私が日常生活をおくる中で，欲しくなったファイルを追加していきます
 
+### noice-WhiteNoiseMaker.c
+指定された音ファイルを流し続けます
+```
+> WhiteNoiseMaker.c
+```
+#### setting
+WhiteNoiseMaker.c内の6行目に音ファイルを指定する
+
+`PlaySound(TEXT("C:\\Users\\%USERNAME%\\Desktop\\sheet\\noise\\Wnoise.wav"), NULL, SND_FILENAME | SND_SYNC);`
+
 ### cc.bat ###
 選択した文字コードでcmd(powershell)を再起動します
 ```

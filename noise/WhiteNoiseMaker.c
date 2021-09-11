@@ -3,7 +3,7 @@
 
 int main(void){
   while(TRUE){
-  PlaySound(TEXT("C:\\Users\\kaito\\Desktop\\sheet\\noise\\Wnoise.wav"), NULL, SND_FILENAME | SND_SYNC);
+  PlaySound(TEXT("C:\\Users\\%USERNAME%\\Desktop\\sheet\\noise\\Wnoise.wav"), NULL, SND_FILENAME | SND_SYNC);
   }
   return 0;
 }
