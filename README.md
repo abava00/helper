@@ -140,7 +140,7 @@ mkdir と cd を同時にします
 ### wpf.bat
 wpfでwindowsアプリケーションを起動する際に用いることができます(不完全)
 ```
-wpf.bat [ソースコード].cs
+> wpf.bat [ソースコード].cs
 ```
 
 ### ydl.bat
