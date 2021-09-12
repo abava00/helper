@@ -1,8 +1,8 @@
 ## My little help program ##
 私が日常生活をおくる中で，欲しくなったファイルを追加していきます
 
-### noice-WhiteNoiseMaker.c
-指定された音ファイルを流し続けます
+### noice/WhiteNoiseMaker.c
+指定された音ファイルを流し続けます(実際に音を作成しているわけでないのは注意)
 ```
 > WhiteNoiseMaker.c
 ```
