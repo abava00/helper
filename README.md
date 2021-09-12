@@ -47,12 +47,12 @@ vimとVScodeのショートカットキーのカンニングペーパーを表�
 
 1. VScode(vim)のカンペをVScodeで起動する
 ```
-> cheat.bat vs(vim)
+> cheat.bat vs(or vim)
 ```
 
 2. VScode(vim)のカンペをメモ帳で起動する
 ```
-> cheat.bat vs(vim) note
+> cheat.bat vs(or vim) note
 ```
 
 ### datacopy.bat ###
@@ -62,14 +62,16 @@ vimとVScodeのショートカットキーのカンニングペーパーを表�
 ```
 #### setting ####
 datacopy.bat 内6,7行目のpath1, 2を目標ディレクトリに変更する
-Linuxのファイル入出力的な感じ
 
-`set path1=C:\Users\%USERNAME%\Desktop\test\howto/A`
 
-`set path2=C:\Users\%USERNAME%\Desktop\test\howto/B`
+`set path1=C:\Users\%USERNAME%\Desktop\test\howto\A`
+
+`set path2=C:\Users\%USERNAME%\Desktop\test\howto\B`
 
 ### inout.bat
 ファイルの結果をファイルに出力したり，ファイルから値を取得します
+
+Linuxのファイル入出力的な感じ
 ```
 > inout.bat [コマンド] w [出力ファイル]
 ```
@@ -87,11 +89,26 @@ javaの文字コードをエンコードしてコンパイルします(InteiJが
 ```
 
 ### logdll.py
-コード内で定義したパターンが目標文書中に存在する場合ダウンロードします
+コード内で定義したパターン（https等)が目標文書中に存在する場合ダウンロードします
 今回はDiscordのlogからダウンロードすることを目的にしています
 ```
 > py logdll.py [目標文書]
 ```
+第1引数を整数値にすると目標文書の形式によっては保存ファイル名を指定出来ます
+（指定しない場合は0となります）
+
+1. タイトル名で保存（第1引数に文書を指定した場合と同じ）
+```
+> py logdll.py 0 [目標文書]
+```
+`unknown_1.png`等と命名され保存されます
+
+2. 投稿された日時で保存
+```
+> py logdll.py 1 [目標文書]
+```
+`20200130T201510.png`等と保存されます（投稿日時が2020/01/30 20:15:10の場合）
+
 #### setting
 logdll.py内の19行目の保存先ディレクトリを設定する
 
