@@ -43,7 +43,7 @@ cdir.ps1内の4行目にbookmarkを記述したtempファイルを作成する(�
 
 ### cheat.bat ###
 vimとVScodeのショートカットキーのカンニングペーパーを表示します
-(同じファイル階層にVim_learn.txtとCScode_learn.txtが必要)
+(同じディレクトリ階層にVim_learn.txtとVScode_learn.txtが必要)
 
 1. VScode(vim)のカンペをVScodeで起動する
 ```
