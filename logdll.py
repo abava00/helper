@@ -81,7 +81,7 @@ class logdll:
         else:
             c = 0
             self.close[file_name_org] = 0
-        file_name += "_" + str(c) + "." + fe # ファイル名に番号を追加
+        file_name += "(" + str(c) + ")." + fe # ファイル名に番号を追加
 
         opener = urllib.request.build_opener()
         opener.addheaders = [('User-agent', 'Mozilla/5.0')]
