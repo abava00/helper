@@ -87,5 +87,8 @@ if ((-not $help) -and (-not $remove) -and (-not $bookmark)){
       $i++
  }
   $number = Read-Host("PATHの番号を入力ください")
+  if ($number-1 -eq -1){
+    return
+    }
   Set-Location -Path $f[$number-1] #カレントディレクトリの移動
 }

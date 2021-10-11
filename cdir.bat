@@ -1,7 +1,7 @@
 @echo off
 REM User settings------------
 REM bookmarks save and temp file(you can change this file path)
-set filepath=%HOMEPATH%.filebookmark
+set filepath=%HOMEPATH%\.filebookmarks
 set tempfile=%filepath%_temp_
 REM -------------------
 
@@ -51,7 +51,6 @@ rem Bookmarkしたディレクトリへ移動する
   set /a count=0
   echo PATHの番号を入力してください
   set /P deletenum=
-
 
 
   for /f "delims=" %%b in (%filepath%) do (
