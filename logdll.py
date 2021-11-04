@@ -11,6 +11,7 @@ https://cdn.discordapp.com
 import os
 import re
 import sys
+import time
 import urllib.request
 import threading
 
@@ -106,6 +107,7 @@ class logdll:
         try:
             self.download(arg)
             # self.close.append(self.download(arg, self.close))
+            time.sleep(1)
         except Exception as e:
             print(e)
 
@@ -121,7 +123,7 @@ class logdll:
 if __name__ == '__main__':
 
     '''
-    この部分が余りにもひどい
+    この部分があまりにもひどい
     '''
     # 引き数の個数を確かめる
     try:
