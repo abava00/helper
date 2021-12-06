@@ -1,0 +1,10 @@
+for H
+
+javascript:{let elm=document.createElement("a");elm.href=document.getElementById("MainVideoPlayer").getElementsByTagName("video")[0].src;elm.target="_blank";elm.click();}
+ニコニコを開いて
+再生方式をhttpsに変更する
+上のコードをブックマークに追加して実行する
+動画部分だけが別で開く
+右クリックからダウンロードする
+
+どうやってるのかわからない
