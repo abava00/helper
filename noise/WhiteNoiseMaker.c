@@ -1,3 +1,5 @@
+/*　compile: gcc app.c -o app.exe -mwindows -lwinmm */
+
 // app-console.c
 #include <windows.h>
 
