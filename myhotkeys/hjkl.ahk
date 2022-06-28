@@ -61,6 +61,13 @@
       return
     }
 
+; move page
+  Alt & h::send, {Browser_Back}
+  Alt & l::send, {Browser_Forward}
+  Alt & j::send, {Browser_Back}
+  Alt & k::send, {Browser_Forward}
+
+
 ;Ctrl & j::{Blind}{Down}
 ;Ctrl & k::{Blind}{Up}
 
