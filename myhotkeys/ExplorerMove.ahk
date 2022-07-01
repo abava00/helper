@@ -1,3 +1,5 @@
+#NoTrayIcon
+
 #IfWinActive,ahk_exe Explorer.EXE
 
 ;toggle control
@@ -9,6 +11,20 @@
       return
     }
     if( focusedControl == "SysTreeView321" )
+    {
+      ControlFocus, DirectUIHWND2, A
+      return
+    }
+    return
+
+  Ctrl & F::
+    ControlGetFocus, focusedControl, A
+    if( focusedControl == "DirectUIHWND2" )
+    {
+      ControlFocus, ToolbarWindow323, A
+      return
+    }
+    if( focusedControl == "ToolbarWindow323" )
     {
       ControlFocus, DirectUIHWND2, A
       return
@@ -38,38 +54,17 @@
       ControlFocus, SysTreeView321, A
       return
     }
-  Ctrl & h::
-    send,{Left}
-    ControlGetFocus, fc, A
-    if( fc == "DirectUIHWND2" ){
-      ControlFocus, DirectUIHWND2, A
-      return
-    }
-    else if( fc == "SysTreeView321" ){
-      ControlFocus, SysTreeView321, A
-      return
-    }
-  Ctrl & l::
-    send,{Right}
-    ControlGetFocus, fc, A
-    if( fc == "DirectUIHWND2" ){
-      ControlFocus, DirectUIHWND2, A
-      return
-    }
-    else if( fc == "SysTreeView321" ){
-      ControlFocus, SysTreeView321, A
-      return
-    }
 
-; move page
-  Alt & h::send, {Browser_Back}
-  Alt & l::send, {Browser_Forward}
+; move history
+  Ctrl & h::send, {Browser_Back}
+  Ctrl & l::send, {Browser_Forward}
+; move hierarchy.
+  Alt & k::send, !{Up}
   Alt & j::send, {Browser_Back}
-  Alt & k::send, {Browser_Forward}
 
-
-;Ctrl & j::{Blind}{Down}
-;Ctrl & k::{Blind}{Up}
+;move tab(QtTabBer)
+  Alt & l::send, ^{Tab}
+  Alt & h::send, ^+{Tab}
 
 ;remap F1 to F2
 F1::F2
@@ -77,3 +72,12 @@ F1::F2
 return
 #IfWinActive
 
+
+; Ctrl + jk
+; 項目を上下に移動する
+; Ctrl + hl
+; ページ遷移履歴を言ったり戻ったりする
+; Alt + kj
+; ファイル階層の上に戻る(jは履歴をさかのぼる操作と同じ(項目がわからないので))
+; Alt + hl
+; タブを移動する
