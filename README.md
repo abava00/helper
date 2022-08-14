@@ -144,7 +144,7 @@ wpfでwindowsアプリケーションを起動する際に用いることがで�
 ```
 
 ### ydl.bat
-youtube-dl を用いてmp3で出力することを簡易化します
+yt-dlp.exe を用いてm4a(音のみ)で出力することを簡易化します
 
 ```
 > ydl.bat
@@ -154,10 +154,59 @@ youtube-dl を用いてmp3で出力することを簡易化します
 \
 |--ydl.bat(本プログラム)
 |
-|--youtubedl
+|--youtube
 |      |
-|      |--youtube-dl.exe(実際に動く実行ファイル)
+|      |-- yt-dlp.exe(実際に動く実行ファイル)
 |      |
-|      |--saves(保存先ディレクトリ)
+|      |-- saves(保存先ディレクトリ)
+:
+```
+
+
+### nico.pyw
+ffmpeg.exe を用いてmax_volume を-0.0dBになるように調整します
+
+出力されるファイルはmp3 形式のみのものになります。
+(foo.m4a -> nico.pyw -> foo.mp3)
+
+```
+>py nico.pyw
+```
+```
+\
+|--nico.pyw本プログラム)
+|
+|--youtube
+|      |
+|      |-- ffmpeg.exe(実際に動くプログラム)
+|      |-- ffmpeg_normalize.exe(実際に動くプログラム)
+|      |
+|      |-- saves(変換前のディレクトリ)
+|      |
+|      |-- output(変換後のディレクトリ)
+|            |
+|            |-- temp(m4a 以外のファイルがあった場合に経由する一時ファイルです、消しても問題ない)
+:
+```
+
+### moredB.pyw
+音を更に大きなものにしたい場合に変換します
+
+```
+>py moredB.pyw
+```
+```
+\
+|--nico.pyw本プログラム)
+|
+|--youtube
+|      |
+|      |-- ffmpeg.exe(実際に動くプログラム)
+|      |
+|      |-- output
+|            |
+|            |-- foo.mp3(入力ファイル[音小])
+|            |
+|            |-- Afoo.mp3(出力ファイル[音大])
 :
 ```
