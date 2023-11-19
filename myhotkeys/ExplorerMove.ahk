@@ -69,6 +69,10 @@
 ;remap F1 to F2
 F1::F2
 
+; Enter
+Ctrl & Space::
+  send,{Enter}
+
 return
 #IfWinActive
 
@@ -81,3 +85,5 @@ return
 ; ファイル階層の上に戻る(jは履歴をさかのぼる操作と同じ(項目がわからないので))
 ; Alt + hl
 ; タブを移動する
+; Ctrl + space
+; ファイルを選択する
